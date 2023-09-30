@@ -1,30 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang ="pt">
+    <!--Como comnetar em html--> 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>O meu primeiro site</title>
 </head>
 <body style="background-color:rgba(23, 33, 34, 0.137);">
-    <div>
+    <main>
+    <div id ="div inicial">
     <h1>Olá, eu sou o primeiro site</h1>
     <h2>Informação pessoal:</h2>
     <p>Sou o João tenho 18 anos. Durante o secundário fiz um curso de gestão e programação de sistemas informáticos, decidi realizar esta licenciatura para me formar em produção de vídeo ou produção web.</p>
+    <figure>
     <img src="licenciatura-com-audiovisual-multi-porto_628.jpg" width="350px" height="250px" alt="ty">
+    <figcaption>Licenciatura de CAM</figcaption>
+    </figure>
+    
     <h2>Alguns gostos pessoais são:</h2>
     <ol>
         <li>Andar de skate</li>
         <br>
-        <img src="ty.jpeg" width="400" height="300" alt="primeiro alt exemplo">
+        <figure>
+        <img src="ty.jpeg" width="400" height="300" alt="tyshawn Jones">
+        <figcaption> TJ em NY York</figcaption>
+      </figure>
         <p>Aqui esta um dos melhores videos de skate produzido pelo cineasta William Strobeck :</p>
-        <!-- <a href="https://www.youtube.com/watch?v=OgfpwO9YsQ8">Play dead</a> -->
+        <a href="https://www.youtube.com/watch?v=OgfpwO9YsQ8">Play dead</a>
+        <p>Uma das músicas que compõe esta peça é:</p>
+        <audio
+      src="https://youtu.be/fjxNyUFki0w?si=OX4DsEiONrBfhlKz"
+      controls></audio>
+   
         <br>
         <br>
-        <!--comentário-->
         <li>Fazer surf</li>
         <p>Um dos meus surfistas favoritos é o japonês kanoa igarashi</p>   
+        <figure>
         <img src="kanoa-igarashi.jpg" width="400" height="300" alt="kanoa">
+        <figcaption> Kanoa no wsl tour </figcaption>
+      </figure>
+
     </ol>
+
+    <div style="text-align: center;" id ="div da tabela">
+    <title>Introdução às ❤️ tables</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color:  rgb(220, 88, 88);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Introdução às ❤️ tables</h1>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>País</th>
+      </tr>
+      <tr>
+        <td>João Sousa</td>
+        <td>🇵🇹</td>
+        <td>Criador deste site</a></td>
+      </tr>
+      
+      <tr>
+        <td>Tyshawn Jones</td>
+        <td>🇺🇲</td>
+        <td>"SOTY" duas vezes</a></td>
+      </tr>
+      <tr>
+        <td>Kanoa Igarashi</td>
+        <td>🇯🇵</td>
+        <td>Surfista Japonês mais bem classificado no ranking mundial</a></td>
+      </tr>
+    </table>
 </div>
+
+    <footer>
+        <p style="text-align: center;">Author: João Sousa®</p>
+      </footer>
+    </main>
     </body>
 </html>
