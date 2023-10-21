@@ -1,54 +1,41 @@
-/* Estilo para o corpo (body) */
-body {
-    background-color: rgba(6, 3, 12, 0.137);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.bomb {
-    width: 50px;
-    height: 50px;
-    background-color: red; /* Cor da bomba */
-    position: absolute;
-    top: 0;
-    left: 50%; /* Começar no centro da tela */
-    transform: translateX(-50%);
-    border-radius: 50%; /* Forma circular */
-    animation: fall 2s linear infinite;
-}
-
-@keyframes fall {
-    0% {
-        top: 0;
-    }
-    100% {
-        top: 100vh; /* A bomba cai até o fundo da tela (viewport height) */
-    }
-}
-
-.explosion {
+#explosion {
     width: 100px;
     height: 100px;
-    background-color: rgb(195, 129, 7); /* Cor da explosão */
+    position: relative;
+    background-color: transparent;
+    animation-name: explode;
+    animation-duration: 5s;
+    overflow: hidden;
+  }
+  
+  .circle {
     position: absolute;
-    top: 100vh; /* Posição inicial da explosão abaixo da tela */
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%; /* Forma circular */
-    animation: explode 0.5s linear 2s 1;
-}
-
-@keyframes explode {
+    background-color: red;
+    width: 60px;
+    height: 60px;
+    border-radius: 90%;
+    animation: move 2s infinite;
+  }
+  
+  @keyframes explode {
     0% {
-        transform: translateX(-50%) scale(1);
-        opacity: 1;
+      transform: scale(1);
     }
     100% {
-        transform: translateX(-50%) scale(2);
-        opacity: 0;
+      transform: scale(4);
     }
-}
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(50px, 50px);
+      background-color: transparent;
+    }
+  }
+  
 
 /* Centralizar o conteúdo na página */
 main {
