@@ -1,9 +1,53 @@
 /* Estilo para o corpo (body) */
 body {
-    background-color: #f4f4f4;
+    background-color: rgba(6, 3, 12, 0.137);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+.bomb {
+    width: 50px;
+    height: 50px;
+    background-color: red; /* Cor da bomba */
+    position: absolute;
+    top: 0;
+    left: 50%; /* Começar no centro da tela */
+    transform: translateX(-50%);
+    border-radius: 50%; /* Forma circular */
+    animation: fall 2s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 100vh; /* A bomba cai até o fundo da tela (viewport height) */
+    }
+}
+
+.explosion {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(195, 129, 7); /* Cor da explosão */
+    position: absolute;
+    top: 100vh; /* Posição inicial da explosão abaixo da tela */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%; /* Forma circular */
+    animation: explode 0.5s linear 2s 1;
+}
+
+@keyframes explode {
+    0% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) scale(2);
+        opacity: 0;
+    }
 }
 
 /* Centralizar o conteúdo na página */
@@ -17,13 +61,13 @@ main {
 
 /* Estilo para os cabeçalhos (headers) */
 h1 {
-    color: royalblue;
-    font-size: 36px;
+    color: rgb(124, 124, 237);
+    font-size: 2.5em; /* Tamanho de fonte aumentado para tela maior */
     text-align: center;
 }
 
 h2 {
-    color: #333;
+    color: rgb(124, 124, 237);
     font-size: 24px;
     text-align: center;
 }
@@ -59,7 +103,7 @@ ol {
 }
 
 li {
-    color: #333;
+    color: rgb(124, 124, 237);
     font-size: 16px;
     margin-bottom: 10px;
     text-align: center;
